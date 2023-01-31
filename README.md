@@ -7,7 +7,7 @@ I have developed this Registaration Page using Java and Spring Boot & Hibernate 
 And also connect the database.
 
 https://github.com/vus05/Login_Page_In_Java_Spring_Boot
-
-I have only take the Screen shot of registartion page only. 
+I have facing some issues in data  so I have taken the Screen shot of registartion page only.
+ 
 
 
