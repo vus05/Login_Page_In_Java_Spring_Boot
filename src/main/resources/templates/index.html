@@ -1,0 +1,166 @@
+<html xmlns:th="https://www.thymeleaf.org"> 
+
+<head>
+<title>Registration Form</title>
+
+
+<!-- Style Start Page -->
+
+<style type="text/css">
+
+.body{
+ background-image:url("n5.jpg"); 
+background-color:	1E8EF8;
+background-color:1E8EF8;
+margin:0px;
+padding:0px;
+width:100%;
+box-sizing:border-box;
+}
+
+.reg_form{
+/*border: blue 4px solid;  */
+padding:20px;
+height: 80vh; 
+width: 80%;
+margin:auto;
+margin-top:5%;
+box-sizing:border-box;
+display:flex;
+}
+
+.right-reg {
+width:50%;
+/*  border:1px solid red;  */
+background-color: #919499;
+text-align: center;
+}
+.right-reg form{
+ margin-top: 10%; 
+}
+
+.right-reg form .facebook{
+color: #0000FF;
+}
+.right-reg form .facebook:hover{
+color: #0B0B61;
+}
+.right-reg .input_user{
+font-size: 16px;
+}
+.right-reg .input_user input {
+font-size: 16px;
+
+}
+
+input[type="text"]{
+
+width:300px;
+height:40px;
+}
+.right-reg .input_user label{
+font-size: 20px;
+
+}
+
+
+
+.left-reg{
+width:50%;
+  border:1px solid red;
+  background-image: url("hm.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.left-reg .Information{
+color: Black;
+font-size:0px;
+font-weight:bold;
+text-align: center;
+margin-top:180px;
+ margin-right: 440px; 
+margin-left: 440px;
+
+}
+.left-reg p{
+ /* border: solid 4px red ; */
+color: white;
+width:450px;
+height: 60%;
+margin-left: 30px;
+}
+
+
+.btn{
+width: 70px;
+height: 30px;
+font-size: 13px;
+font-weight: bold;
+}
+</style>
+<!-- Style End Page -->
+</head>
+
+
+<body class="body">
+<div class="reg_form">
+
+ 	 <div class="left-reg">
+ 	 <!-- Left Start Title -->
+ 	<!--  <h1 class="Information">Information</h1> -->
+ 	<h1 class="Information">PRIMARY SERVER</h1>
+ 	  <!-- Left End Title -->
+ 	 <p>
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren,
+no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt 
+ut labore et dolore magna aliquyam erat, 
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren.consetetur sadipscing elitr, sed diam nonumy eirmod 
+tempor invidunt ut labore et dolore magna aliquyam erat, 
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
+</div>  
+
+
+
+ <div class="right-reg">
+<div  th:if="${session.message}"
+     th:classappend="${session.message}" class="alert alert-success"
+     role="alert">
+     <p th:text="${session.message}"></p>
+<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+</div>
+
+
+<form th:action="@{/reg}" th:object="${details}" method="post" >
+
+<h1 style="font-size: 40px;font-style: normal; font-weight: 800; margin-top: 80px;">Create An Account</h1>
+
+<div class="input_user">  <br><br> <input type="text" name="A_fname" class="form-control" placeholder="Enter First name"><br><br>    
+<input type="text" name="B_lname" class="form-control" placeholder="Enter Last name"><br><br>
+<input type="text" name="C_phone" class="form-control" placeholder="Enter Contact number"><br><br>
+<input type="text" name="D_email" class="form-control" placeholder="Enter Email address"><br><br>
+<input style="width: 30px; height: 18px;"; type="radio" name="E1_gender" value="Male"><label style="font-weight: 20px;">Male</label><input style="width: 30px; height: 18px;" type="radio" name="E1_gender" value="Female"><label style="font-weight: 20px;" >Female</label><br><br>  
+<input type="text" name="E_password" class="form-control" placeholder="Enter Password"> <br><br><br>  
+<button type="sign-in" class="btn">Sign up</button> <br><br>
+</div> -->
+
+<!-- Form Start Page -->
+
+</div>
+</form>
+</div>
+</body>
+</html>
